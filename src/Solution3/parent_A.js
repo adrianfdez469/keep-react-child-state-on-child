@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import ChildSolution3 from './child_B';
 import '../App.css';
 
@@ -14,14 +14,10 @@ const ParentSolution3 = () => {
   const ref2 = useRef();
   const ref3 = useRef();
 
-  const getState1 = useCallback((fn) => fn(ref1), []);
-  const getState2 = useCallback((fn) => fn(ref2), []);
-  const getState3 = useCallback((fn) => fn(ref3), []);
-
   const handleShowState = () => {
-    const color1 = ref1.current;
-    const color2 = ref2.current;
-    const color3 = ref3.current;
+    const color1 = ref1.current.getRGB();
+    const color2 = ref2.current.getRGB();
+    const color3 = ref3.current.getRGB();
 
     const avgRed = (color1.red + color2.red + color3.red) / 3;
     const avgGreen = (color1.green + color2.green + color3.green) / 3;
@@ -61,9 +57,9 @@ const ParentSolution3 = () => {
       </div>
 
       <div className="childWrapper">
-        <ChildSolution3 id={1} alpha={alpha} initialBlue={0} initialGreen={128} initialRed={0} getState={getState1} />
-        <ChildSolution3 id={2} alpha={alpha} initialBlue={0} initialGreen={0} initialRed={128} getState={getState2} />
-        <ChildSolution3 id={3} alpha={alpha} initialBlue={128} initialGreen={0} initialRed={0} getState={getState3} />
+        <ChildSolution3 id={1} ref={ref1} alpha={alpha} initialBlue={0} initialGreen={128} initialRed={0} />
+        <ChildSolution3 id={2} ref={ref2} alpha={alpha} initialBlue={0} initialGreen={0} initialRed={128} />
+        <ChildSolution3 id={3} ref={ref3} alpha={alpha} initialBlue={128} initialGreen={0} initialRed={0} />
 
       </div>
 

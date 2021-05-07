@@ -1,13 +1,11 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState, useCallback, forwardRef, useImperativeHandle } from 'react';
 import '../App.css';
 
-
-
-const ChildSolution4 = ({ id, alpha, initialRed, initialGreen, initialBlue, getState }) => {
+const ChildSolution3 = forwardRef(({ id, alpha, initialRed, initialGreen, initialBlue }, ref) => {
 
   console.log(`SOLUTION 3: CHILD ${id} get's render`);
   const [rgb, setRgbColor] = useState({ red: initialRed, green: initialGreen, blue: initialBlue });
-  const ref = useRef();
+  const _ref = useRef();
 
   const handleChangeColor = useCallback((color, sign) => {
     if (rgb[color] >= 0 && rgb[color] <= 255) {
@@ -22,11 +20,14 @@ const ChildSolution4 = ({ id, alpha, initialRed, initialGreen, initialBlue, getS
     }
   }, [rgb]);
 
+  useImperativeHandle(ref, () => ({
+    getRGB: () => {
+      return rgb;
+    },
+  }));
+
   useEffect(() => {
-    ref.current.value = +ref.current.value + 1;
-    getState((referencia) => {
-      referencia.current = rgb;
-    })
+    _ref.current.value = +_ref.current.value + 1;
   });
 
   return (
@@ -35,7 +36,7 @@ const ChildSolution4 = ({ id, alpha, initialRed, initialGreen, initialBlue, getS
       <b>{id}</b>
       <div className="">
         <b>Render times</b>
-        <input type="text" ref={ref} style={{ margin: '0 5px', width: '50px' }} />
+        <input type="text" ref={_ref} style={{ margin: '0 5px', width: '50px' }} />
       </div>
 
       <div className="groupButtons">
@@ -57,6 +58,6 @@ const ChildSolution4 = ({ id, alpha, initialRed, initialGreen, initialBlue, getS
       </div>
     </div >
   );
-};
+});
 
-export default React.memo(ChildSolution4);
+export default React.memo(ChildSolution3);

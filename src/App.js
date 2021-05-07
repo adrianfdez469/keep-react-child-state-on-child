@@ -5,8 +5,6 @@ import { Provider } from './Solution2/context';
 
 import Parent3 from './Solution3/parent_A';
 
-import Parent4 from './Solution4/parent_A';
-
 import './App.css';
 
 function App() {
@@ -20,7 +18,6 @@ function App() {
 
       <Parent3 />
 
-      <Parent4 />
     </div>
   );
 }
