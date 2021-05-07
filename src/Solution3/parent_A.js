@@ -23,9 +23,9 @@ const ParentSolution3 = () => {
     const color2 = ref2.current;
     const color3 = ref3.current;
 
-    const avgRed = color1.red + color2.red + color3.red / 3;
-    const avgGreen = color1.green + color2.green + color3.green / 3;
-    const avgBlue = color1.blue + color2.blue + color3.blue / 3;
+    const avgRed = (color1.red + color2.red + color3.red) / 3;
+    const avgGreen = (color1.green + color2.green + color3.green) / 3;
+    const avgBlue = (color1.blue + color2.blue + color3.blue) / 3;
     setAvgColor({ red: avgRed, green: avgGreen, blue: avgBlue });
   }
 
