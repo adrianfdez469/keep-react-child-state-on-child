@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/keep-react-child-state-on-child/static/css/main.86d96f33.chunk.css",
+    "main.js": "/keep-react-child-state-on-child/static/js/main.b8c24a91.chunk.js",
+    "main.js.map": "/keep-react-child-state-on-child/static/js/main.b8c24a91.chunk.js.map",
+    "runtime-main.js": "/keep-react-child-state-on-child/static/js/runtime-main.69fc4044.js",
+    "runtime-main.js.map": "/keep-react-child-state-on-child/static/js/runtime-main.69fc4044.js.map",
+    "static/js/2.107a364e.chunk.js": "/keep-react-child-state-on-child/static/js/2.107a364e.chunk.js",
+    "static/js/2.107a364e.chunk.js.map": "/keep-react-child-state-on-child/static/js/2.107a364e.chunk.js.map",
+    "index.html": "/keep-react-child-state-on-child/index.html",
+    "static/css/main.86d96f33.chunk.css.map": "/keep-react-child-state-on-child/static/css/main.86d96f33.chunk.css.map",
+    "static/js/2.107a364e.chunk.js.LICENSE.txt": "/keep-react-child-state-on-child/static/js/2.107a364e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69fc4044.js",
+    "static/js/2.107a364e.chunk.js",
+    "static/css/main.86d96f33.chunk.css",
+    "static/js/main.b8c24a91.chunk.js"
+  ]
+}
