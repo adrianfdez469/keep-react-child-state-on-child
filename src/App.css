@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  align-content: center;
+  justify-content: center;
 }
 
 .parentCmp {  
@@ -11,6 +14,8 @@
   justify-content: space-evenly;
   flex: 0.33
 }
+
+
 
 .childWrapper {
   margin: 5px 0;
