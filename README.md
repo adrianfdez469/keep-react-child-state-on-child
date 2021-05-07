@@ -11,4 +11,6 @@ In this example you will see:
 | Solution 3: Managing state on child       | Hight      | Medium       | Hight       |
 
 This is a create-react-app so you can fork, and test your self.
-Use yarn start or npm start to test it.
+Use yarn start or npm start to test it, or got to this app where is deployed:
+
+https://adrianfdez469.github.io/keep-react-child-state-on-child/
