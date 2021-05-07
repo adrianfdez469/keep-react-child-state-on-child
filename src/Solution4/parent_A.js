@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import ChildSolution4 from './child_B';
 import '../App.css';
 
-const ParentSolution3 = () => {
+const ParentSolution4 = () => {
   // Dont use useReducer for simplicity
-  console.log(`SOLUTION 3: PARENT get's render`);
+  console.log(`SOLUTION 4: PARENT get's render`);
 
   const [alpha, setAlpha] = useState(1);
   const [avgColor, setAvgColor] = useState({ red: 250, green: 250, blue: 250 });
@@ -69,4 +69,4 @@ const ParentSolution3 = () => {
 
 };
 
-export default ParentSolution3;
+export default ParentSolution4;
